@@ -13,7 +13,7 @@ class Bootcamp {
         this.students = students;
     }
     registerStudent(student) {
-        if (this.students.filter(s => s.email === student.email)) {
+        if (this.students.filter(stu => stu.email === student.email).length) {
             console.log(`The student ${student.email} is already registered!`);
         } else {
             this.students.push(student);
